@@ -1,0 +1,39 @@
+[project]
+name = "nlp-with-llm"
+requires-python = ">=3.11"
+version = "0.1.0"
+authors = [
+    {name = "S1M0N38", email = "simone.bertolotto@centai.eu"},
+]
+readme = "README.md"
+description = "Natural Language Process (NLP) with Legal Language Model (LLM)."
+dependencies = [
+  "numpy",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+extend-include = ["*.ipynb"]
+task-tags = ["FIX", "TODO", "HACK", "WARN", "PERF", "NOTE", "TEST"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+typeCheckingMode = "off"
+
+[tool.setuptools]
+packages = ["nlp_with_llm"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver2"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
