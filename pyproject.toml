@@ -9,6 +9,7 @@ readme = "README.md"
 description = "Natural Language Process (NLP) with Legal Language Model (LLM)."
 dependencies = [
   "numpy",
+  "pandas",
 ]
 
 [build-system]
